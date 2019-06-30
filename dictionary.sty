@@ -2,7 +2,6 @@
 \ProvidesPackage{dictionary}
 
 \RequirePackage{xparse}
-\providecommand{\skipline}{\par\bigskip}
 
 \providecommand{\fullindent}{
 	\hangindent=\parindent
@@ -10,13 +9,11 @@
 }
 
 \providecommand{\note}[1]{
-	\skipline
 	\fullindent
 	\textit{{#1}}
 }
 
 \ProvideDocumentCommand{\dictword}{m o}{
-  \skipline
 	\IfNoValueTF{#2}{
 		\noindent\textbf{{#1}}
 	}{
